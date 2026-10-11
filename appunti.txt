@@ -4,3 +4,4 @@ Riga 3: fine
 Riga 4: aggiunta da Main
 Riga 5: aggiunta della riga da Branch 1
 Riga 6: aggiunta della riga da Branch 2
+Riga 7: nuova riga di testo
