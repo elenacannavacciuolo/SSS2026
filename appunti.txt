@@ -1,5 +1,5 @@
 Riga 1: inizio
-Riga 2: contenuto del file
+Riga 2: modifica della riga da branch conflitto
 Riga 3: fine
 Riga 4: aggiunta da Main
 Riga 5: aggiunta della riga da Branch 1
