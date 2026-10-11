@@ -1,5 +1,5 @@
 Riga 1: inizio
-Riga 2: modifica riga 2 da main
+Riga 2: risoluzione dei problemi, gestione conflitto
 Riga 3: fine
 Riga 4: aggiunta da Main
 Riga 5: aggiunta della riga da Branch 1
