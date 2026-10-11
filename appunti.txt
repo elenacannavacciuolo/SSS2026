@@ -1,0 +1,3 @@
+Riga 1: inizio
+Riga 2: contenuto del file
+Riga 3: fine
