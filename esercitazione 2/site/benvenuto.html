@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benvenuto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1 id="titolo">Benvenuto!</h1>
+    <p>Hai effettuato l'accesso al sito servito da <strong>nginx</strong> dentro un container Docker. 🐳</p>
+    <p id="orario"></p>
+    <button onclick="logout()">Esci</button>
+  </div>
+  <script>
+    const utente = sessionStorage.getItem("utente");
+    if (!utente) {
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("titolo").textContent = "Benvenuta/o, " + utente + "!";
+      document.getElementById("orario").textContent =
+        "Accesso effettuato alle " + new Date().toLocaleTimeString("it-IT");
+    }
+    function logout() {
+      sessionStorage.removeItem("utente");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

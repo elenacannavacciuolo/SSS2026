@@ -21,14 +21,17 @@
       const p = document.getElementById("pass").value;
       const msg = document.getElementById("msg");
       if (u === "studente" && p === "docker") {
-        msg.style.color = "green";
-        msg.textContent = "Benvenuto, " + u + "! Ora è " +
-          new Date().toLocaleTimeString("it-IT");
+        sessionStorage.setItem("utente", u);
+        window.location.href = "benvenuto.html";
       } else {
         msg.style.color = "crimson";
         msg.textContent = "Credenziali errate (prova studente / docker)";
       }
     }
+    // Invio per accedere
+    document.addEventListener("keydown", e => {
+      if (e.key === "Enter") login();
+    });
   </script>
 </body>
 </html>
