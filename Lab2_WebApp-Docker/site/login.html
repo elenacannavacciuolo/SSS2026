@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Login</h1>
+    <input id="user" type="text" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+    <button onclick="login()">Accedi</button>
+    <p id="msg"></p>
+    <a href="index.html">Torna alla home</a>
+  </div>
+  <script>
+    function login() {
+      const u = document.getElementById("user").value.trim();
+      const p = document.getElementById("pass").value;
+      const msg = document.getElementById("msg");
+      if (u === "studente" && p === "docker") {
+        sessionStorage.setItem("utente", u);
+        window.location.href = "benvenuto.html";
+      } else {
+        msg.style.color = "crimson";
+        msg.textContent = "Credenziali errate (prova studente / docker)";
+      }
+    }
+    // Invio per accedere
+    document.addEventListener("keydown", e => {
+      if (e.key === "Enter") login();
+    });
+  </script>
+</body>
+</html>
