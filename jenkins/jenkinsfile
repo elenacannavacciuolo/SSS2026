@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build Backend') {
+            steps {
+                sh 'docker build -t somebanking-backend:latest -f "Lab4_someBankingApp - DockerCompose/backend/Dockerfile" .'
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                sh 'docker build -t somebanking-frontend:latest -f "Lab4_someBankingApp - DockerCompose/frontend/Dockerfile" .'
+            }
+        }
+    }
+}
